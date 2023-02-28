@@ -6,7 +6,8 @@ Handled 2 cases:
 1. Myfile.txt not present: It will verify if myfile.txt doesn't exist then it will upload the myfile.txt to required s3 bucket and exit.
 2. Myfile.txt present: It will check if the content of myfile.txt is different the previously uploaded file.If yes,it will upload new file.
 
-Using **Watch Utility** to watch the myfile.txt for any modification at run time
+Using **Watch Utility** to watch the myfile.txt for any modification at run time.
+
 Currently it's running the script every 30sec to detect any new changes and accordingly upload it to S3 bucket.
 
 export bucket_name=ido20230224182720500300000001
