@@ -12,7 +12,8 @@ Currently it's running the script every 30sec to detect any new changes and acco
 
 export bucket_name=ido20230224182720500300000001
   
-Adding some screenshots from watch utility on how to watch the changes
+Adding some screenshots from watch utility on how to watch the changes.
+
  **$watch -n 30 ./s3uploader.sh $bucket_name myfile.txt**
 
 <img width="510" alt="Screen Shot 2023-02-28 at 4 23 28 PM" src="https://user-images.githubusercontent.com/48429431/221983759-1ed9a440-0192-4cbd-8909-047c2bee923f.png">
