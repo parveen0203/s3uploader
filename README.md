@@ -9,6 +9,7 @@ Handled 2 cases:
 Using **Watch Utility** to watch the myfile.txt for any modification at run time
 Currently it's running the script every 30sec to detect any new changes and accordingly upload it to S3 bucket.
 
+export bucket_name=ido20230224182720500300000001
   **$watch -n 30 ./s3uploader.sh $bucket_name myfile.txt**
   
 Adding some screenshots from watch utility on how to watch the changes
