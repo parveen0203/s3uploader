@@ -17,9 +17,9 @@ fi
 #Downloading from S3 bucket and comparing with previously uploaded file.If content changed then upload it again with new content
 aws s3api get-object --bucket $bucket_name --key $file_name current.txt
 if diff $file_name current.txt; then
-   echo "no file change"
+   echo "File content not modified"
 else
-   echo "file changed" 
+   echo "File content Modified. Uploading new file to S3 Bucket" 
    aws s3api put-object --bucket $bucket_name --key $file_name --body $file_name
    rm current.txt
 fi
