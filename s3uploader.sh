@@ -13,11 +13,12 @@ if [ $NOT_EXIST ]; then
   exit 0
 fi
 
+#Downloading from S3 bucket and comparing with previously uploaded file
 aws s3api get-object --bucket $bucket_name --key $file_name current.txt
 if diff $file_name current.txt; then
    echo "no file change"
 else
-   echo "file changed"
-   rm current.txt 
+   echo "file changed" 
    aws s3api put-object --bucket $bucket_name --key $file_name --body $file_name
+   rm current.txt
 fi
